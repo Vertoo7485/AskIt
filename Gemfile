@@ -37,7 +37,11 @@ gem 'rubyzip', '~> 2'
 gem 'valid_email2', '~> 4.0'
 gem 'blueprinter', '~> 0.25'
 gem 'pundit', '~> 2.1'
+<<<<<<< HEAD
 gem 'sidekiq', '~> 7'
+=======
+gem 'sidekiq', '~> 6'
+>>>>>>> 48268d1 (Lesson 20)
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -222,8 +222,12 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+<<<<<<< HEAD
     redis-client (0.14.1)
       connection_pool
+=======
+    redis (4.8.1)
+>>>>>>> 48268d1 (Lesson 20)
     regexp_parser (2.8.1)
     request_store (1.5.1)
       rack (>= 1.4)
@@ -271,11 +275,18 @@ GEM
       sprockets-rails
       tilt
     semantic_range (3.0.0)
+<<<<<<< HEAD
     sidekiq (7.1.2)
       concurrent-ruby (< 2)
       connection_pool (>= 2.3.0)
       rack (>= 2.2.4)
       redis-client (>= 0.14.0)
+=======
+    sidekiq (6.5.9)
+      connection_pool (>= 2.2.5, < 3)
+      rack (~> 2.0)
+      redis (>= 4.5.0, < 5)
+>>>>>>> 48268d1 (Lesson 20)
     spring (4.1.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
@@ -343,7 +354,11 @@ DEPENDENCIES
   rubyXL (~> 3.4)
   rubyzip (~> 2)
   sass-rails (>= 6)
+<<<<<<< HEAD
   sidekiq (~> 7)
+=======
+  sidekiq (~> 6)
+>>>>>>> 48268d1 (Lesson 20)
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
