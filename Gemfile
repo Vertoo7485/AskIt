@@ -11,10 +11,11 @@ gem 'rails', '7.0.6'
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 6.3'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.0'
+
+gem 'sprockets-rails', '~> 3.4'
+gem 'jsbundling-rails', '~> 1.0'
+gem 'cssbundling-rails', '~> 1.0'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -29,7 +30,7 @@ gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'dotenv-rails'
 gem 'draper', '~> 4.0'
-gem 'lokalise_rails', '~> 5.2'
+gem 'i18n-tasks', '~> 0.9.34'
 gem 'pagy', '~> 6.0.4'
 gem 'rails-i18n', '~> 7'
 gem 'rubyXL', '~> 3.4'
@@ -37,11 +38,7 @@ gem 'rubyzip', '~> 2'
 gem 'valid_email2', '~> 4.0'
 gem 'blueprinter', '~> 0.25'
 gem 'pundit', '~> 2.1'
-<<<<<<< HEAD
 gem 'sidekiq', '~> 7'
-=======
-gem 'sidekiq', '~> 6'
->>>>>>> 48268d1 (Lesson 20)
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -62,14 +59,12 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   # gem 'bullet'
-  gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 3.1'
   gem 'rubocop', '~> 1.18', require: false
+  gem 'rubocop-i18n', '~> 3', require: false
   gem 'rubocop-performance', '~> 1.11', require: false
   gem 'rubocop-rails', '~> 2.11', require: false
   gem 'letter_opener'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
