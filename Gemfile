@@ -12,16 +12,14 @@ gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 6.3'
 
-gem 'sprockets-rails', '~> 3.4'
+gem 'propshaft', '~> 0.6'
 gem 'jsbundling-rails', '~> 1.0'
 gem 'cssbundling-rails', '~> 1.0'
-
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbo-rails', '~> 1.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
@@ -30,7 +28,6 @@ gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'dotenv-rails'
 gem 'draper', '~> 4.0'
-gem 'i18n-tasks', '~> 0.9.34'
 gem 'pagy', '~> 6.0.4'
 gem 'rails-i18n', '~> 7'
 gem 'rubyXL', '~> 3.4'

@@ -7,20 +7,36 @@ class QuestionsController < ApplicationController
   before_action :authorize_question!
   after_action :verify_authorized
 
-  def index
-    @pagy, @questions = pagy Question.all_by_tags(params[:tag_ids])
-    @questions = @questions.decorate
-  end
-
   def show
     load_question_answers
+  end
+
+  def destroy
+    @question.destroy
+    flash[:success] = t('.success')
+    redirect_to questions_path, status: :see_other
+  end
+
+  def edit; end
+
+  def update
+    if @question.update question_params
+      flash[:success] = t('.success')
+      redirect_to questions_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def index
+    @tags = Tag.where(id: params[:tag_ids]) if params[:tag_ids]
+    @pagy, @questions = pagy Question.all_by_tags(@tags)
+    @questions = @questions.decorate
   end
 
   def new
     @question = Question.new
   end
-
-  def edit; end
 
   def create
     @question = current_user.questions.build question_params
@@ -28,23 +44,8 @@ class QuestionsController < ApplicationController
       flash[:success] = t('.success')
       redirect_to questions_path
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
-  end
-
-  def update
-    if @question.update question_params
-      flash[:success] = t('.success')
-      redirect_to questions_path
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @question.destroy
-    flash[:success] = t('.success')
-    redirect_to questions_path
   end
 
   private
