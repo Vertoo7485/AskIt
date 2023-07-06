@@ -1,0 +1,18 @@
+/* Error: $color1: var(--bs-border-color) is not a color.
+ *    ,
+ * 31 | $select-color-dropdown-border-top: mix($input-border-color, $input-bg, 0.8) !default;
+ *    |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   tom-select/src/scss/tom-select.bootstrap5.scss 31:36    @import
+ *   app/assets/stylesheets/application.bootstrap.scss 31:9  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: $color1: var(--bs-border-color) is not a color.\a    \2577 \a 31 \2502  $select-color-dropdown-border-top: mix($input-border-color, $input-bg, 0.8) !default;\a    \2502                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   tom-select/src/scss/tom-select.bootstrap5.scss 31:36    @import\a   app/assets/stylesheets/application.bootstrap.scss 31:9  root stylesheet";
+}
