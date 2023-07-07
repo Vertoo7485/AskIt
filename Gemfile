@@ -36,6 +36,7 @@ gem 'valid_email2', '~> 4.0'
 gem 'blueprinter', '~> 0.25'
 gem 'pundit', '~> 2.1'
 gem 'sidekiq', '~> 7'
+gem 'faker', '~> 3.2'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -46,7 +47,6 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'faker', '~> 3.2'
   gem 'pry-rails'
 end
 
