@@ -11,11 +11,13 @@ require 'pagy/extras/bootstrap'
 # All the Pagy::VARS are set for all the Pagy instances but can be overridden
 # per instance by just passing them to Pagy.new or the #pagy controller method
 
+
 # Instance variables
 # See https://ddnexus.github.io/pagy/api/pagy#instance-variables
 # Pagy::VARS[:page]   = 1                                  # default
 # Pagy::VARS[:items]  = 20                                 # default
 # Pagy::VARS[:outset] = 0                                  # default
+
 
 # Other Variables
 # See https://ddnexus.github.io/pagy/api/pagy#other-variables
@@ -27,8 +29,10 @@ require 'pagy/extras/bootstrap'
 # Pagy::VARS[:i18n_key]   = 'pagy.item_name'                # default
 # Pagy::VARS[:cycle]      = true                            # example
 
+
 # Extras
 # See https://ddnexus.github.io/pagy/extras
+
 
 # Backend Extras
 
@@ -55,6 +59,7 @@ require 'pagy/extras/bootstrap'
 # require 'pagy/extras/searchkick'
 # uncomment if you are going to use Searchkick.pagy_search
 # Searchkick.extend Pagy::Searchkick
+
 
 # Frontend Extras
 
@@ -92,13 +97,13 @@ require 'pagy/extras/bootstrap'
 # See https://ddnexus.github.io/pagy/extras/navs#steps
 # Pagy::VARS[:steps] = { 0 => [2,3,3,2], 540 => [3,5,5,3], 720 => [5,7,7,5] }   # example
 
+
 # Feature Extras
 
 # Headers extra: http response headers (and other helpers) useful for API pagination
 # See http://ddnexus.github.io/pagy/extras/headers
 # require 'pagy/extras/headers'
-# Pagy::VARS[:headers] = { page: 'Current-Page', items: 'Page-Items',
-# count: 'Total-Count', pages: 'Total-Pages' }     # default
+# Pagy::VARS[:headers] = { page: 'Current-Page', items: 'Page-Items', count: 'Total-Count', pages: 'Total-Pages' }     # default
 
 # Support extra: Extra support for features like: incremental, infinite, auto-scroll pagination
 # See https://ddnexus.github.io/pagy/extras/support
@@ -132,12 +137,14 @@ require 'pagy/extras/bootstrap'
 # set to false if you want to make :enable_trim_extra an opt-in variable
 # Pagy::VARS[:enable_trim_extra] = false # default true
 
+
 # Rails
 
 # Rails: extras assets path required by the helpers that use javascript
 # (pagy*_nav_js, pagy*_combo_nav_js, and pagy_items_selector_js)
 # See https://ddnexus.github.io/pagy/extras#javascript
 # Rails.application.config.assets.paths << Pagy.root.join('javascripts')
+
 
 # I18n
 
@@ -168,10 +175,11 @@ require 'pagy/extras/bootstrap'
 #                  filepath: 'path/to/pagy-xyz.yml',
 #                  pluralize: lambda{|count| ... } )
 
+
 # I18n extra: uses the standard i18n gem which is ~18x slower using ~10x more memory
 # than the default pagy internal i18n (see above)
 # See https://ddnexus.github.io/pagy/extras/i18n
-require 'pagy/extras/i18n'
+# require 'pagy/extras/i18n'
 
 # Default i18n key
 # Pagy::VARS[:i18n_key] = 'pagy.item_name'   # default
