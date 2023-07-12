@@ -6,10 +6,9 @@ module ApplicationHelper
   def prepend_flash
     turbo_stream.prepend 'flash', partial: 'shared/flash'
   end
+
   def pagination(obj)
-    # rubocop:disable Rails/OutputSafety
     raw(pagy_bootstrap_nav(obj)) if obj.pages > 1
-    # rubocop:enable Rails/OutputSafety
   end
 
   def nav_tab(title, url, options = {})
@@ -27,7 +26,7 @@ module ApplicationHelper
   end
 
   def currently_at(current_page = '')
-    render partial: 'shared/menu', locals: { current_page: current_page }
+    render partial: 'shared/menu', locals: { current_page: }
   end
 
   def full_title(page_title = '')

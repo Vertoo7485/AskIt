@@ -15,7 +15,7 @@ class Question < ApplicationRecord
   scope :all_by_tags, lambda { |tags|
     questions = includes(:user)
     questions = if tags
-                  questions.joins(:tags).where(tags: tags).preload(:tags)
+                  questions.joins(:tags).where(tags:).preload(:tags)
                 else
                   questions.includes(:question_tags, :tags)
                 end

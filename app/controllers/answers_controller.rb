@@ -9,32 +9,56 @@ class AnswersController < ApplicationController
   before_action :authorize_answer!
   after_action :verify_authorized
 
-  def update
-    if @answer.update answer_update_params
-      flash[:success] = t '.success'
-      redirect_to question_path(@question, anchor: dom_id(@answer))
-    else
-      render :edit
-    end
-  end
-
   def edit; end
 
   def create
     @answer = @question.answers.build answer_create_params
 
     if @answer.save
-      flash[:success] = t '.success'
-      redirect_to question_path(@question)
+      respond_to do |format|
+        format.html do
+          flash[:success] = t '.success'
+          redirect_to question_path(@question)
+        end
+
+        format.turbo_stream do
+          @answer = @answer.decorate
+          flash.now[:success] = t '.success'
+        end
+      end
     else
       load_question_answers(do_render: true)
     end
   end
 
+  def update
+    if @answer.update answer_update_params
+      respond_to do |format|
+        format.html do
+          flash[:success] = t '.success'
+          redirect_to question_path(@question, anchor: dom_id(@answer))
+        end
+
+        format.turbo_stream do
+          @answer = @answer.decorate
+          flash.now[:success] = t '.success'
+        end
+      end
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @answer.destroy
-    flash[:success] = t '.success'
-    redirect_to question_path(@question), status: :see_other
+    respond_to do |format|
+      format.html do
+        flash[:success] = t '.success'
+        redirect_to question_path(@question), status: :see_other
+      end
+
+      format.turbo_stream { flash.now[:success] = t('.success') }
+    end
   end
 
   private

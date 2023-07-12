@@ -12,9 +12,9 @@ gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 6.3'
 
-gem 'propshaft', '~> 0.6'
-gem 'jsbundling-rails', '~> 1.0'
 gem 'cssbundling-rails', '~> 1.0'
+gem 'jsbundling-rails', '~> 1.0'
+gem 'propshaft', '~> 0.6'
 gem 'turbo-rails', '~> 1.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
@@ -24,19 +24,19 @@ gem 'redis', '~> 4.0'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'activerecord-import', '~> 1.2'
+gem 'blueprinter', '~> 0.25'
 gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'dotenv-rails'
 gem 'draper', '~> 4.0'
+gem 'faker', '~> 3.2'
 gem 'pagy', '~> 6.0.4'
+gem 'pundit', '~> 2.1'
 gem 'rails-i18n', '~> 7'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2'
-gem 'valid_email2', '~> 4.0'
-gem 'blueprinter', '~> 0.25'
-gem 'pundit', '~> 2.1'
 gem 'sidekiq', '~> 7'
-gem 'faker', '~> 3.2'
+gem 'valid_email2', '~> 4.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -56,12 +56,12 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   # gem 'bullet'
+  gem 'letter_opener'
   gem 'rack-mini-profiler', '~> 3.1'
   gem 'rubocop', '~> 1.18', require: false
   gem 'rubocop-i18n', '~> 3', require: false
   gem 'rubocop-performance', '~> 1.11', require: false
   gem 'rubocop-rails', '~> 2.11', require: false
-  gem 'letter_opener'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

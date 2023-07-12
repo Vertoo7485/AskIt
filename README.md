@@ -1,24 +1,61 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Это мой учебный проект по RoR, представляет из себя простое веб приложение, в котором пользователи могут задавать вопросы, отвечать на них, а также оставлять комментарии.
+За основу был взят материал с канала https://www.youtube.com/@IlyaBodrovKrukowski.
+Во время прохождения данного курса, были изучены и пременены на практике:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1 Создание и настройка приложения
+2 Модели и миграции
+3 Работа с консолью rails
+4 Валидации
+5 MVC
+6 Использование вспомогательных функций, именованные маршруты
+7 CRUD
+8 Частичные представления (partials)
+9 Добавление Bootstrap с помощью yarn
+10 CSS и Sass в Rails
+11 Стилизация страниц с помощью Bootstrap
+12 Стилизация полей с ошибками
+13 Вывод сообщений об ошибках, найденных в форме
+14 Вывод сообщений об успехе (с помощью flash)
+15 before_action, как обрабатывать ошибки в контроллерах с помощью rescue_from
+16 Concern
+17 Как выстраивать отношения "один-ко-многим" (one-to-many) с помощью has_many и belongs_to
+18 Helpers
+19 Функция sanitize
+20 Функция strip_tags (удаление всех тэгов)
+21 Частичные представления и метод render collection
+22 Библиотека Faker (генерирование демо-данных)
+23 Метод truncate (сокращение текста до указанного лимита)
+24 Разбиние по страницам с помощью kaminari
+25 Миграция с kaminari на Pagy
+26 Регистрация пользователей с нуля
+27 Bcrypt
+28 Декораторы
+29 Аутентификация
+30 "Запоминание пользователя"
+31 Rubocop
+32 Импорт/экспорт Excel, архивы ZIP
+33 Перевод, интернационализация, локализация (i18n, l10n)
+34 Callbacks
+35 Gravatar
+36 Полиморфические отношения
+37 Bullet
+38 Отношение многие-ко-многим (many-to-many, has_many through) 
+39 Select2
+40 Ajax
+41 JBuilder
+42 Ролевая модель (enum)
+43 Миграция с Select2 на TomSelect
+44 Сериализация с помощью Blueprinter
+45 Авторизация (Pundit)
+46 Разделением прав доступа по ролям
+47 Отправка писем (ActionMailer, letter_opener)
+48 ActiveJob
+49 Sidekiq
+50 ActiveStorage
+51 ZIP background
+52 Миграция на Rails 7
+53 Миграция с Webpacker на ESBuild и DartSass
+54 Миграция на Turbo и Propshaft
+55 Turbo Frames
